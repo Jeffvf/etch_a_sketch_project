@@ -21,5 +21,11 @@
     justify-content: center;
     justify-content: center;
     margin-bottom: 20px;
-    border: 500px;
+}
+
+.btn{
+   padding: 24px;
+   background-color: #32CD32;
+   color: white; 
+   border-radius: 10%
 }
