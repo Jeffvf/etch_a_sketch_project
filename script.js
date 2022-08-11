@@ -16,9 +16,13 @@ function add_color_to_cells(){
     
     grid.forEach((item) => {
         item.addEventListener('mouseover', () => {
-            item.style.backgroundColor = 'yellow';
+            item.style.backgroundColor = generate_random_colors();
         });
     });
+}
+
+function generate_random_colors(){
+    return `rgb(${Math.random() * 257}, ${Math.random() * 257}, ${Math.random() * 257})`;
 }
 
 makeRows(16,16);
