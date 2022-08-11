@@ -28,7 +28,7 @@ const button = document.querySelector('button');
 
 button.addEventListener('click', () => {
     let size = window.prompt('Choose the size of the new grid:');
-    if(size != null){
+    if(size != null && size<=100){
         container.innerHTML = "";
         makeRows(size,size);
         add_color_to_cells();
