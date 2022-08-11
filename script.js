@@ -11,12 +11,26 @@ function makeRows(rows, cols){
     }
 }
 
-makeRows(16,16);
-
-const grid = document.querySelectorAll('.grid-item');
-
-grid.forEach((item) => {
-    item.addEventListener('mouseover', () => {
-        item.style.backgroundColor = 'yellow';
+function add_color_to_cells(){
+    const grid = document.querySelectorAll('.grid-item');
+    
+    grid.forEach((item) => {
+        item.addEventListener('mouseover', () => {
+            item.style.backgroundColor = 'yellow';
+        });
     });
+}
+
+makeRows(16,16);
+add_color_to_cells();
+
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+    let size = window.prompt('Choose the size of the new grid:');
+    if(size != null){
+        container.innerHTML = "";
+        makeRows(size,size);
+        add_color_to_cells();
+    }
 });
